@@ -15,7 +15,7 @@ Open to work: **Amsterdam · Spain · Switzerland · remote.** EU citizen, no vi
 | **Agent harnesses and orchestration** | Orca, Herder, Pi, OMP, Claude Code, Codex and other model-agnostic agent harnesses; multi-agent development workflows |
 | **Reliability of LLM output** | Pydantic schema validation, evals on real data, deterministic grounding checks, OpenTelemetry tracing (Jaeger) |
 | **Search and retrieval** | Vector databases (Pinecone, Chroma), text embeddings, semantic search, Elasticsearch |
-| **Snowflake** | Snowpark Python, stored procedures and tasks, semantic views, Cortex Agents, Streamlit in Snowflake, resource monitors |
+| **Snowflake** | Snowpark Python, stored procedures and tasks, semantic views, Cortex Agent specifications, Streamlit in Snowflake, resource monitors |
 | **Backend and data** | Python, FastAPI, Node.js, Express, PostgreSQL, MySQL, MongoDB, Redis, Pandas, web scraping (Playwright, BeautifulSoup) |
 | **Front end** | TypeScript, JavaScript, React, Redux, Next.js, HTML, CSS |
 | **Cloud and delivery** | GCP (Dataflow, BigQuery, Cloud Storage), Azure, AWS, Docker, Terraform, Ansible, GitHub Actions, GitLab CI/CD, Linux |
