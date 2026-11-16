@@ -36,11 +36,13 @@ source announcements.
 ### [motherlode-data-pipeline](https://github.com/mbessalle/motherlode-data-pipeline)
 An unattended pipeline that turns mining deal announcements into a structured Postgres database.
 The model extracts; code decides what is written.
-- LangGraph state machine with a validate → retry → quarantine loop
-- Pydantic schema for every extracted record, and every number checked against its source:
-  **98% supported on 33 real press releases**
-- OpenTelemetry traces with model and token counts per call, viewed in Jaeger
-- 67 offline tests, CI on every push, scheduled runs on GitHub Actions
+- Audited the client's 1,305 production rows against their sources and **corrected 184 values in the live
+  database**, each with a quote code confirmed; 422 model proposals held back by coded client rules
+- Every value checked in three tiers: code, the Jev decision model, then Opus only for what stays uncertain
+- LangGraph state machine with a validate → retry → quarantine loop; **94% of extracted numbers supported on
+  33 real press releases**
+- OpenTelemetry traces in Jaeger, hard time limits and a stall alarm on long runs, 145 offline tests, CI on
+  every push, scheduled runs on GitHub Actions
 
 ### [ai-interviewer](https://github.com/mbessalle/ai-interviewer)
 A voice interviewer for hiring: companies create interviews, candidates talk to an AI agent, and the
