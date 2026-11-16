@@ -15,12 +15,23 @@ Open to work: **Amsterdam · Spain · Switzerland · remote.** EU citizen, no vi
 | **Agent harnesses and orchestration** | Orca, Herder, Pi, OMP, Claude Code, Codex and other model-agnostic agent harnesses; multi-agent development workflows |
 | **Reliability of LLM output** | Pydantic schema validation, evals on real data, deterministic grounding checks, OpenTelemetry tracing (Jaeger) |
 | **Search and retrieval** | Vector databases (Pinecone, Chroma), text embeddings, semantic search, Elasticsearch |
+| **Snowflake** | Snowpark Python, stored procedures and tasks, semantic views, Cortex Agents, Streamlit in Snowflake, resource monitors |
 | **Backend and data** | Python, FastAPI, Node.js, Express, PostgreSQL, MySQL, MongoDB, Redis, Pandas, web scraping (Playwright, BeautifulSoup) |
 | **Front end** | TypeScript, JavaScript, React, Redux, Next.js, HTML, CSS |
 | **Cloud and delivery** | GCP (Dataflow, BigQuery, Cloud Storage), Azure, AWS, Docker, Terraform, Ansible, GitHub Actions, GitLab CI/CD, Linux |
 | **ML and analytics** | PyTorch, TensorFlow, scikit-learn, Tableau, n8n |
 
 ## Selected work
+
+### [snowflake-motherlode](https://github.com/mbessalle/snowflake-motherlode)
+The mining-deal pipeline rebuilt inside Snowflake, and an analyst's hand-made deal table checked against the
+source announcements.
+- Snowpark pipeline, stored procedure and task, semantic view, Cortex Agent object and a hierarchical document
+  index, deployed on a Snowflake account; a Streamlit in Snowflake app to review the results
+- Every one of the analyst's 1,180 values checked in three tiers: code finds where it is written, a small
+  calibrated classifier judges what the passage means, a Claude Code session reads the whole document only
+  for the values the first two cannot settle: **428 confirmed, 162 contradicted, for 0.05 USD**
+- Thresholds set from blind labels, actor-critic review by agents in isolated git worktrees, 290 offline tests
 
 ### [motherlode-data-pipeline](https://github.com/mbessalle/motherlode-data-pipeline)
 An unattended pipeline that turns mining deal announcements into a structured Postgres database.
